@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../static/css/login_visuals.css">
+    <script type="module" src="../static/js/login_support.js" defer></script>
+    <script src=" https://kit.fontawesome.com/8533c91442.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <div id="video-background">
+        <video autoplay loop muted>
+            <source src="../static/content/background.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+
+        <div class="logo">
+            <a href="https://www.blumeglobal.com/"><img src="../static/content/blumelogo.png" alt="Company Logo"></a>
+        </div>
+    </header>
+
+        <div class="container">
+            {% if message %}
+            <div class="popup-message">{{ message }}</div>
+            {% endif %}
+
+            <div class="left-section">
+                <h4 class="wordCarousel">
+                    <span>Enter the Gateway to Seamless Operations</span>
+                    <div>
+                        <!-- Use classes 2,3,4, or 5 to match the number of words -->
+                        <ul class="flip5">
+                            <li>Create PO</li>
+                            <li>Search Inventory</li>
+                            <li>Create SO</li>
+                            <li>Adjust Inventory</li>
+                            <li>Manage Orders</li>
+                        </ul>
+                    </div>
+                </h4>
+            </div>
+            <div class = "right-section">
+                <form class ="login-form" id = "login-form" action ="">
+                    <h2>Login</h2>
+                    <div class="form-item">
+                        <i class = "fa-solid fa-user"></i>
+                        <input type="text" class = "input-text" id="username" placeholder="Username" required>
+                    </div>
+                    <div id="message" class="error-message"></div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+</body>
+</html>
+
+
+<!--Enter the Gateway to Seamless Operations-->

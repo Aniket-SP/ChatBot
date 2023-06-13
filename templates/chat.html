@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Searching</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chat_visuals.css') }}">
+</head>
+
+<body class="dark-mode">
+    <div id="customAlert" class="alert dark-mode">
+        The string is empty!
+    </div>
+    <div id="chat-id">
+        <div id="id" class="dark-mode">
+            <img src="{{ url_for('static', filename='content/images.png') }}" alt="Image">
+        </div>
+        <div id="chat-container" class="dark-mode">
+            <div id="chat">
+                <div id="header">
+                    <div id="chat-header">Chat</div>
+                    <div id="theme">
+                        <button id="darkmode" class="dark-mode">
+                        </button>
+                    </div>
+                </div>
+                <div id="chat-messages"></div>
+                <div id="chat-input">
+                    <input type="text" id="message-input" class="dark-mode" placeholder="Type a message...">
+                    <button id="send-button">
+                        <img src="{{ url_for('static', filename='content/send.png') }}" alt="Send Icon">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('static', filename='js/chat_support.js') }}" type="module"></script>
+<!--    for auth .js-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/js/auth_support.js"></script>
+</body>
+
+</html>
